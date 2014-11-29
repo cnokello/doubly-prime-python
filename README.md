@@ -45,7 +45,7 @@ However, instructions for this assignment adheres to the original definition of 
     * [Windows installation](https://docs.python.org/3/using/windows.html#installing-python)
     * [MacOS installation](https://docs.python.org/3/using/mac.html#getting-and-installing-macpython)
 
-4. Ensure you add PYTHON_HOME to your path variable.
+4. Ensure you add PYTHON_HOME to your PATH variable.
 
 5. Then, from within the directory into which you cloned the code in 2 above, run: 
 
