@@ -4,10 +4,9 @@ Created on Nov 29, 2014
 @author: nelson.okello
 '''
 from lib2to3.fixer_util import String
-import math
-import sys, getopt
+import math, sys
 
-class DoublyPrimeNumberGenerator(object):
+class DoublyPrimeNumbers(object):
     
     
     '''
@@ -22,7 +21,7 @@ class DoublyPrimeNumberGenerator(object):
         
     
         
-    def generateDoublyPrimes(self):
+    def get(self):
         """Returns a list of doubly prime numbers with length numPrimes"""
         
         def isPrime(n: int):
@@ -64,7 +63,7 @@ elif(len(sys.argv) == 2):
 else: print("Invalid arguments passed. Format: python src/intervw/DoublyPrimeNumberGenerator.py <N>")
     
 # # Now, run the generator
-dpnGen = DoublyPrimeNumberGenerator(N)
-primes = list(dpnGen.generateDoublyPrimes())
+dpnGen = DoublyPrimeNumbers(N)
+primes = list(dpnGen.get())
 print(primes)
 print("No. of double prime numbers generated: " + str(len(primes)))
