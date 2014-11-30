@@ -25,7 +25,7 @@ class DoublyPrimeNumbers(object):
         """Returns a list of doubly prime numbers with length numPrimes"""
         
         def isPrime(n: int):
-            """ Returns True if n is a doubly prime number. False otherwise"""
+            """ Returns True if n is a prime number. False otherwise"""
             if n < 1: return False 
             elif (n == 1 or n == 2): return True
             elif (n > 2 and n % 2 == 0): return False
@@ -33,7 +33,7 @@ class DoublyPrimeNumbers(object):
             return all(n % i for i in range(3, int(math.sqrt(n)) + 1, 2))
         
         def isAllPrime(nString: String):
-            """ Returns True if all the numeric characters in the string are prime numbers
+            """ Returns True if all the numeric characters in the string are prime numbers. 
                 False otherwise."""
             for c in nString:
                 if  not isPrime(int(c)):
