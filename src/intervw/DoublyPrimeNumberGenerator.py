@@ -5,6 +5,7 @@ Created on Nov 29, 2014
 '''
 from lib2to3.fixer_util import String
 import math
+import sys, getopt
 
 class DoublyPrimeNumberGenerator(object):
     
@@ -54,8 +55,16 @@ class DoublyPrimeNumberGenerator(object):
         return primes
 
    
-# # Run the doubly prime number generator 
-dpnGen = DoublyPrimeNumberGenerator(100)
+# # Run the doubly prime number generator
+# # Retrieve passed arguments
+if(len(sys.argv) == 1):    
+    N = 100 
+elif(len(sys.argv) == 2):
+    N = int(sys.argv[1])
+else: print("Invalid arguments passed. Format: python src/intervw/DoublyPrimeNumberGenerator.py <N>")
+    
+# # Now, run the generator
+dpnGen = DoublyPrimeNumberGenerator(N)
 primes = list(dpnGen.generateDoublyPrimes())
 print(primes)
 print("No. of double prime numbers generated: " + str(len(primes)))
